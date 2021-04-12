@@ -148,7 +148,7 @@
 
   * 打开gradle设置，设置gradle 中Grad 了JVM为 Use Project JDK
 
-    ![gradle设置](image/setter-gradle.png)
+    ![gradle设置](images/setter-gradle.png)
 
   
 
@@ -207,7 +207,7 @@
   
   * 设置include dependencies
   
-    ![Es启动配置](image/setter-run-es.png)
+    ![Es启动配置](images/setter-run-es.png)
   
   * 启动es
   
