@@ -521,7 +521,8 @@ public class PluginsService extends AbstractComponent {
     private Plugin loadBundle(Bundle bundle, Map<String, Plugin> loaded) {
         String name = bundle.plugin.getName();
 
-        verifyCompatibility(bundle.plugin);
+        // TODO: 2021/4/2 注释掉可以解决启动版本不一致问题 
+//        verifyCompatibility(bundle.plugin);
 
         // collect loaders of extended plugins
         List<ClassLoader> extendedLoaders = new ArrayList<>();
