@@ -41,11 +41,11 @@ if (!isEclipse && !isIdea) {
       }
     }
   }
-  
+
   configurations {
     java9Compile.extendsFrom(compile)
   }
-  
+
   dependencies {
     java9Compile sourceSets.main.output
   }
@@ -78,8 +78,8 @@ dependencies {
   compile project(':libs:elasticsearch-secure-sm')
   compile project(':libs:elasticsearch-x-content')
   compile project(":libs:elasticsearch-geo")
-
-  compileOnly project(':libs:elasticsearch-plugin-classloader')
+// compileOnly project(':libs:elasticsearch-plugin-classloader'),compileOnly 改为compile
+  compile project(':libs:elasticsearch-plugin-classloader')
   testRuntime project(':libs:elasticsearch-plugin-classloader')
 
   // lucene
