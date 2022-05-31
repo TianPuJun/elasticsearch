@@ -24,13 +24,14 @@
 
 * 3、导入idea，选择导入
 
-  ![image-20220321210331275](https://gitee.com/cuixt/photo/raw/master/uPic/2022%20/03%20/image-20220321210331275.png)
+
+  ![image-20220321210331275](images/WX20220531-191602.png)
 
   
 
   选中 build.gradle ，idea会提示是否导入gradle项目，选择是
 
-  ![image-20220321210428828](https://gitee.com/cuixt/photo/raw/master/uPic/2022%20/03%20/image-20220321210428828.png)
+  ![image-20220321210428828](images/WX20220531-191743.png)
 
   
 
@@ -59,11 +60,11 @@
 
 * 8、idea设置项目JDK与gradle版本
 
-  ![image-20220321211607282](https://gitee.com/cuixt/photo/raw/master/uPic/2022%20/03%20/image-20220321211607282.png)
+  ![image-20220321211607282](images/WX20220531-191906.png)
 
   gradle版本与项目jdk保持一致
 
-  ![image-20220321211756337](https://gitee.com/cuixt/photo/raw/master/uPic/2022%20/03%20/image-20220321211756337.png)
+  ![image-20220321211756337](images/WX20220531-191939.png)
 
 * 9、指定刚才新建的home文件夹地址中的配置文件与数据存放地址，参数内容如下
 
@@ -84,9 +85,9 @@
 
   
 
-  ![image-20220321211905970](https://gitee.com/cuixt/photo/raw/master/uPic/2022%20/03%20/image-20220321211905970.png)
+  ![image-20220321211905970](images/WX20220531-192015.png)
 
-  ![image-20220321211939322](https://gitee.com/cuixt/photo/raw/master/uPic/2022%20/03%20/image-20220321211939322.png)
+  ![image-20220321211939322](images/WX20220531-192043.png)
 
 * 10、到这，如果还不能启动，那就尽情的谷歌与百度吧，也欢迎留言一起讨论
 
