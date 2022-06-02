@@ -47,6 +47,8 @@
 * 6、解压`elasticsearch-oss-7.4.3-SNAPSHOT-x86_64.rpm`,然后在`elasticsearch` 同级别目录下新建文件夹`home`,并把解压后的文件放到home文件夹下
   ![WX20220602-105120.png](images/WX20220602-105120.png)
   ![WX20220602-105203.png](images/WX20220602-105203.png)
+  
+  注意：elasticsearch/home_bak为启动的config备份
 * 7、找到`elasticsearch/server/build.gradle`,修改 compileOnly 改为compile,详细信息查看下面
 
   ```text
@@ -66,7 +68,7 @@
   ```text
   -Des.path.conf=/cxt/codework/github/elasticsearch/7.4/home/config
   -Des.path.home=/cxt/codework/github/elasticsearch/7.4/home
-  -Djava.security.policy=/cxt/codework/github/elasticsearch7.4/home/config/java.policy
+  -Djava.security.policy=/cxt/codework/github/elasticsearch/7.4/home/config/java.policy
   -Dlog4j2.disable.jmx=true
   ```
 
