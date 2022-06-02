@@ -43,15 +43,10 @@
   ```
 
 * 5、打包成功之后，到`elasticsearch/distribution/packages`下找到自己对应系统的发行版文件
-
-  <img src="https://gitee.com/cuixt/photo/raw/master/uPic/2022%20/03%20/image-20220321211004360.png" alt="image-20220321211004360" style="zoom:100%;" />
-
+  ![WX20220602-105001.png](images/WX20220602-105001.png)
 * 6、解压`elasticsearch-oss-7.4.3-SNAPSHOT-x86_64.rpm`,然后在`elasticsearch` 同级别目录下新建文件夹`home`,并把解压后的文件放到home文件夹下
-
-  <img src="https://gitee.com/cuixt/photo/raw/master/uPic/2022%20/03%20/image-20220321211247410.png" alt="image-20220321211247410" style="zoom:100%;" />
-
-  <img src="https://gitee.com/cuixt/photo/raw/master/uPic/2022%20/03%20/image-20220321211314101.png" alt="image-20220321211314101" style="zoom:100%;" />
-
+  ![WX20220602-105120.png](images/WX20220602-105120.png)
+  ![WX20220602-105203.png](images/WX20220602-105203.png)
 * 7、找到`elasticsearch/server/build.gradle`,修改 compileOnly 改为compile,详细信息查看下面
 
   ```text
