@@ -52,3 +52,7 @@
 -Djava.security.policy=/cxt/codework/github/elasticsearch/7.13/home/config/java.policy
 -Dlog4j2.disable.jmx=true
 ```
+
+# 代码更新
+* 拉取fork的原远程仓库代码 get fetch upstream
+* 提交
