@@ -59,6 +59,10 @@ class Elasticsearch extends EnvironmentAwareCommand {
      * Main entry point for starting elasticsearch
      */
     public static void main(final String[] args) throws Exception {
+        System.setProperty("es.path.conf","/cxt/codework/github/elasticsearch/8.1/home/config");
+        System.setProperty("es.path.home", "/cxt/codework/github/elasticsearch/8.1/home");
+        System.setProperty("log4j2.disable.jmx", "true");
+        System.setProperty("java.security.policy","/cxt/codework/github/elasticsearch/8.1/home/config/java.policy");
         overrideDnsCachePolicyProperties();
         org.elasticsearch.bootstrap.Security.prepopulateSecurityCaller();
 
