@@ -293,6 +293,7 @@ public class RestController implements HttpServerTransport.Dispatcher {
 
     /**
      * Registers a REST handler with the controller. The REST handler declares the {@code method}
+     * 注册所有的 HTTP 请求处理 handler
      * and {@code path} combinations.
      */
     public void registerHandler(final RestHandler handler) {

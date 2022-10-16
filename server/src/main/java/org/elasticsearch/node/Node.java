@@ -1010,6 +1010,7 @@ public class Node implements Closeable {
             this.namedXContentRegistry = xContentRegistry;
 
             logger.debug("initializing HTTP handlers ...");
+            logger.info("开始加载所有的 HTTP handlers ");
             actionModule.initRestHandlers(() -> clusterService.state().nodes());
             logger.info("initialized");
 

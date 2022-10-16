@@ -29,7 +29,7 @@ public abstract class Command implements Closeable {
 
     private final Runnable beforeMain;
 
-    /** The option parser for this command. */
+    /** The option parser for this command. 解析命令行参数 */
     protected final OptionParser parser = new OptionParser();
 
     private final OptionSpec<Void> helpOption = parser.acceptsAll(Arrays.asList("h", "help"), "Show help").forHelp();

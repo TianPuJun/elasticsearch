@@ -684,12 +684,14 @@ public class ActionModule extends AbstractModule {
 
     public void initRestHandlers(Supplier<DiscoveryNodes> nodesInCluster) {
         List<AbstractCatAction> catActions = new ArrayList<>();
+        // 提前创建加载handler的方法
         Consumer<RestHandler> registerHandler = handler -> {
             if (handler instanceof AbstractCatAction) {
                 catActions.add((AbstractCatAction) handler);
             }
             restController.registerHandler(handler);
         };
+        // 通过688行registerHandler加入到RestController#registerHandler
         registerHandler.accept(new RestAddVotingConfigExclusionAction());
         registerHandler.accept(new RestClearVotingConfigExclusionsAction());
         registerHandler.accept(new RestMainAction());
@@ -852,6 +854,7 @@ public class ActionModule extends AbstractModule {
         registerHandler.accept(new RestUpdateDesiredNodesAction());
         registerHandler.accept(new RestDeleteDesiredNodesAction());
 
+        // 插件中的handler
         for (ActionPlugin plugin : actionPlugins) {
             for (RestHandler handler : plugin.getRestHandlers(
                 settings,
