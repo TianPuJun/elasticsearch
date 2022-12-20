@@ -177,7 +177,7 @@ public abstract class AbstractHttpServerTransport extends AbstractLifecycleCompo
         final int publishPort = resolvePublishPort(settings, boundAddresses, publishInetAddress);
         TransportAddress publishAddress = new TransportAddress(new InetSocketAddress(publishInetAddress, publishPort));
         this.boundAddress = new BoundTransportAddress(boundAddresses.toArray(new TransportAddress[0]), publishAddress);
-        logger.info("{}", boundAddress);
+        logger.info("ES 启动地址 {}", boundAddress);
     }
 
     private TransportAddress bindAddress(final InetAddress hostAddress) {

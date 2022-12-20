@@ -317,6 +317,7 @@ public final class NodeEnvironment implements Closeable {
 
                 ensureNoShardData(nodePaths);
             }
+            // 节点元数据创建
 
             this.nodeMetadata = loadNodeMetadata(settings, logger, nodePaths);
 

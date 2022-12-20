@@ -43,7 +43,7 @@ class Elasticsearch extends EnvironmentAwareCommand {
     // visible for testing
     Elasticsearch() {
         // 初始化启动加载
-        super("Starts Elasticsearch", () -> {}); // we configure logging later so we override the base class from configuring logging
+        super("Starts Elasticsearch zui yu custom ", () -> {}); // we configure logging later so we override the base class from configuring logging
         versionOption = parser.acceptsAll(Arrays.asList("V", "version"), "Prints Elasticsearch version information and exits");
         daemonizeOption = parser.acceptsAll(Arrays.asList("d", "daemonize"), "Starts Elasticsearch in the background")
             .availableUnless(versionOption);
@@ -60,11 +60,12 @@ class Elasticsearch extends EnvironmentAwareCommand {
      * Main entry point for starting elasticsearch
      */
     public static void main(final String[] args) throws Exception {
-        // 提前设置启动环境变量、源码启动设置，也可指定在启动参数 start
-        System.setProperty("es.path.conf","/cxt/codework/github/elasticsearch/8.1/home/config");
-        System.setProperty("es.path.home", "/cxt/codework/github/elasticsearch/8.1/home");
-        System.setProperty("log4j2.disable.jmx", "true");
-        System.setProperty("java.security.policy","/cxt/codework/github/elasticsearch/8.1/home/config/java.policy");
+        // 提前设置启动环境变量、源码启动设置，也可指定在启动参数 start；
+        // 打包时需移除
+//        System.setProperty("es.path.conf","/cxt/codework/github/elasticsearch/8.1/home/config");
+//        System.setProperty("es.path.home", "/cxt/codework/github/elasticsearch/8.1/home");
+//        System.setProperty("log4j2.disable.jmx", "true");
+//        System.setProperty("java.security.policy","/cxt/codework/github/elasticsearch/8.1/home/config/java.policy");
         // 提前设置启动环境变量、源码启动设置，也可指定在启动参数 end
         // 重写es相关dns缓存
         overrideDnsCachePolicyProperties();

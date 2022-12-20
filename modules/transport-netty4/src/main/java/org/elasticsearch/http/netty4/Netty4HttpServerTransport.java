@@ -245,6 +245,7 @@ public class Netty4HttpServerTransport extends AbstractHttpServerTransport {
             serverBootstrap.option(ChannelOption.SO_REUSEADDR, reuseAddress);
             serverBootstrap.childOption(ChannelOption.SO_REUSEADDR, reuseAddress);
 
+            // ES启动绑定端口地址
             bindServer();
             success = true;
         } finally {

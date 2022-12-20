@@ -160,3 +160,13 @@ grant {
 };
 ```
 
+# 打包运行，启动报错权限问题
+打包时需把java.policy文件打包进去，或者在打包完成的jdk/conf/security里面创建java.policy文件，文件内容如下
+```text
+    permission java.lang.RuntimePermission "getClassLoader";
+    permission java.lang.RuntimePermission "setContextClassLoader";
+    permission java.lang.RuntimePermission "createClassLoader";
+    permission java.lang.RuntimePermission "accessDeclaredMembers";
+    permission org.elasticsearch.secure_sm.ThreadPermission "modifyArbitraryThreadGroup";
+
+```
