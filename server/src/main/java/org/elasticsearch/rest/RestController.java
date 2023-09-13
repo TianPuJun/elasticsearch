@@ -468,6 +468,7 @@ public class RestController implements HttpServerTransport.Dispatcher {
                         return;
                     }
                 } else {
+                    logger.info("开始执行请求:{}",request.uri());
                     dispatchRequest(request, channel, handler, threadContext);
                     return;
                 }

@@ -14,7 +14,7 @@ import java.security.PrivilegedAction;
 import java.util.Objects;
 
 /**
- * Extension of SecurityManager that works around a few design flaws in Java Security.
+ * Extension of SecurityManager that works around a few design flaws in Java SecurityExtension of SecurityManager that works around a few design flaws in Java Security.
  * <p>
  * There are a few major problems that require custom {@code SecurityManager} logic to fix:
  * <ul>

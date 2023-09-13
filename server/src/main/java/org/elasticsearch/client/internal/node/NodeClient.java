@@ -160,6 +160,7 @@ public class NodeClient extends AbstractClient {
         }
         @SuppressWarnings("unchecked")
         TransportAction<Request, Response> transportAction = (TransportAction<Request, Response>) actions.get(action);
+        logger.info("获取到的 actionName:{}",transportAction.actionName);
         if (transportAction == null) {
             throw new IllegalStateException("failed to find action [" + action + "] to execute");
         }

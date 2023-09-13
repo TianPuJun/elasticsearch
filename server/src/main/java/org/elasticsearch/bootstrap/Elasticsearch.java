@@ -91,6 +91,8 @@ class Elasticsearch extends EnvironmentAwareCommand {
             printLogsSuggestion();
             exit(status);
         }
+        Terminal.DEFAULT.print(Terminal.Verbosity.SILENT,"微信公众号《醉鱼Java》定制版 Elasticsearch 启动成功 ");
+
     }
 
     /**

@@ -8,6 +8,8 @@
 
 package org.elasticsearch.search;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.lucene.search.SortField;
 import org.apache.lucene.search.TotalHits;
 import org.apache.lucene.search.TotalHits.Relation;
@@ -17,6 +19,7 @@ import org.elasticsearch.common.io.stream.StreamOutput;
 import org.elasticsearch.common.io.stream.Writeable;
 import org.elasticsearch.common.lucene.Lucene;
 import org.elasticsearch.core.Nullable;
+import org.elasticsearch.rest.RestController;
 import org.elasticsearch.rest.action.search.RestSearchAction;
 import org.elasticsearch.xcontent.ToXContentFragment;
 import org.elasticsearch.xcontent.XContentBuilder;
@@ -46,6 +49,7 @@ public final class SearchHits implements Writeable, ToXContentFragment, Iterable
     private final String collapseField;
     @Nullable
     private final Object[] collapseValues;
+    private static final Logger logger = LogManager.getLogger(SearchHits.class);
 
     public SearchHits(SearchHit[] hits, @Nullable TotalHits totalHits, float maxScore) {
         this(hits, totalHits, maxScore, null, null, null);
@@ -194,6 +198,7 @@ public final class SearchHits implements Writeable, ToXContentFragment, Iterable
         }
         builder.field(Fields.HITS);
         builder.startArray();
+        logger.info("构建响应结果:{}",totalHits.value);
         for (SearchHit hit : hits) {
             hit.toXContent(builder, params);
         }

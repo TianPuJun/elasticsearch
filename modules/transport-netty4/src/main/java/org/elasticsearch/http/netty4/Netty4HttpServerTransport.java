@@ -195,6 +195,7 @@ public class Netty4HttpServerTransport extends AbstractHttpServerTransport {
             serverBootstrap.option(ChannelOption.ALLOCATOR, NettyAllocator.getAllocator());
             serverBootstrap.childOption(ChannelOption.ALLOCATOR, NettyAllocator.getAllocator());
 
+            logger.info("netty 服务器绑定 configureServerChannelHandler");
             serverBootstrap.childHandler(configureServerChannelHandler());
             serverBootstrap.handler(new ServerChannelExceptionHandler(this));
 

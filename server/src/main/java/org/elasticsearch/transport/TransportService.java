@@ -843,6 +843,7 @@ public class TransportService extends AbstractLifecycleComponent
                 assert options.timeout() != null;
                 timeoutHandler.scheduleTimeout(options.timeout());
             }
+            logger.info("Elasticsearch发送消息,action [{}];request [{}]",action,request);
             connection.sendRequest(requestId, action, request, options); // local node optimization happens upstream
         } catch (final Exception e) {
             // usually happen either because we failed to connect to the node
@@ -908,7 +909,7 @@ public class TransportService extends AbstractLifecycleComponent
             if (ThreadPool.Names.SAME.equals(executor)) {
                 reg.processMessageReceived(request, channel);
             } else {
-                boolean success = false;
+                 boolean success = false;
                 request.incRef();
                 try {
                     threadPool.executor(executor).execute(new AbstractRunnable() {

@@ -327,6 +327,7 @@ public abstract class TransportBroadcastByNodeAction<
                 for (Map.Entry<String, List<ShardRouting>> entry : nodeIds.entrySet()) {
                     nodeIndex++;
                     DiscoveryNode node = nodes.get(entry.getKey());
+                    logger.info("sendNodeRequest 发送请求 node, entry.getValue(), nodeIndex");
                     sendNodeRequest(node, entry.getValue(), nodeIndex);
                 }
             }
